@@ -1,0 +1,173 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.main{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+    position: absolute;
+	justify-content: center;
+	align-items: center;
+	gap: 2px;
+	flex-wrap: wrap;
+	overflow: hidden;
+    background-color: black;
+
+ 
+}
+ span{
+	width: calc(6.25vw - 2px);
+	height: calc(6.25vw - 2px);
+    border:2px solid;
+    overflow: hidden;
+    /* border-color: white; */
+    transition: 1.2s ease;
+    /* z-index: 2; */
+    &:hover{
+        background-color: white;
+        transition: 0s;
+    }
+
+
+}
+
+@keyframes br-animation{
+	0%
+	{
+		transform: translateY(-100%);
+	}
+	100%
+	{
+		transform: translateY(100%);
+	}
+}
+
+@media (max-width: 800px)
+{
+
+	 span 
+	{
+		width: calc(10vw - 2px);
+		height: calc(10vw - 2px);
+	}
+}
+@media (max-width: 700px)
+{
+	 span 
+	{
+		width: calc(20vw - 2px);
+		height: calc(20vw - 2px);
+	}
+}
+
+
+.login{
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    border-radius: 9px;
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    box-shadow: 1px 1px 54px 0px rgba(0,0,0,0.8);
+-webkit-box-shadow: 1px 1px 54px 0px rgba(0,0,0,0.8);
+-moz-box-shadow: 1px 1px 54px 0px rgba(0,0,0,0.8);
+}
+.login-title{
+    height: fit-content;
+    width: fit-content;
+    font-size: 2.5em;
+    font-weight: 800;
+    border-color: transparent;
+
+    font-family:Arial, Helvetica, sans-serif;
+}
+.input{
+    width: 250px;
+    height: 40px;
+    /* border-radius: 50px; */
+    border: 3px solid black;
+    background-color: white;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.option{
+    height: 60px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+
+}
+.btn{
+
+    font-weight: 700;
+    border: 2px solid black;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+.sign-in{
+    height: 100%;
+    width: 140px;
+    /* border-radius: 40px; */
+    font-size: 1.3em;
+    color: white;
+    background-color: black;
+    
+    &:hover{
+        color: black;
+        background-color: white;
+    }
+
+
+}
+.sign-up{
+    height: 100%;
+    width: 120px;
+    /* border-radius: 40px; */
+    color: black;
+    font-size: 1.2em;
+
+    &:hover{
+        color: white;
+        background-color: black;
+    }
+}
+.input-box{
+    position: relative;
+}
+.passbox{
+    display: none;
+}
+.pass{
+    position: absolute;
+    top: 13px;
+    right: 25px;
+}
+.open{
+    position: relative;
+    left: 0px;
+    cursor: pointer;
+}
+.close{
+    position: absolute;
+    left: 0px;
+    cursor: pointer;
+    visibility: hidden;
+
+}
+.eyes-open{
+    visibility: hidden;
+    background-color: red;
+}
+.eyes-close{
+    visibility: visible;
+}
